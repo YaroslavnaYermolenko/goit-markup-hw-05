@@ -542,7 +542,7 @@
             <input class="subscribe-input" type="text" placeholder="E-mail" />
             <button class="subscribe-button" type="submit">
               Subscribe
-              <svg class="button-icon" width="24" height="20">
+              <svg class="button-icon" width="24" height="24">
                 <use href="./images/icons.svg#icon-send"></use>
               </svg>
             </button>
@@ -551,7 +551,39 @@
       </div>
     </footer>
     <div class="modal-overlay">
-      <div class="modal"></div>
+      <div class="modal">
+        <button class="button-close" type="reset">
+          <svg class="button-closse-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <p class="form-header">Leave your contacts and we will call you back</p>
+        <label name="" class="form-label"
+          >Name
+          <input type="text" name="" class="form-input" placeholder="" />
+        </label>
+        <label name="" class="form-label"
+          >Email
+          <input type="text" name="" class="form-input" />
+        </label>
+        <label name="" class="form-label"
+          >Phone
+          <input type="text" name="" class="form-input" />
+        </label>
+        <label name="" class="form-label"
+          >Comment
+          <textarea
+            type="text"
+            name=""
+            class="form-texarea"
+            placeholder="Text input"
+          ></textarea>
+        </label>
+        <label name="" class="form-label">
+          <input type="checkbox" class="form-checkbox" />I accept the terms and
+          conditions of the <a href="">Privacy Policy</a></label>
+        <button type="submit" class="" class="form-button">Send</button>
+      </div>
     </div>
   </body>
 </html>
