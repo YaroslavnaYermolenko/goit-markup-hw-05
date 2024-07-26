@@ -472,7 +472,7 @@ body .footer-desc {
   height: 40px;
   border: 1px solid #fff;
   border-radius: 4px;
-  background-color: #2e2f42;
+  background-color: transparent;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   font-size: 12px;
   font-weight: 400;
@@ -487,6 +487,7 @@ body .footer-desc {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 165px;
   border: none;
   border-radius: 4px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -515,7 +516,7 @@ body .footer-desc {
 }
 
 .button-close-icon {
-  /*padding: 7px;*/
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-header {
   font-size: 16px;
@@ -532,19 +533,17 @@ body .footer-desc {
   margin-bottom: 4px;
   font-size: 12px;
   font-weight: 400;
-  line-height: 14px;
+  line-height: 1.17;
   letter-spacing: 0.04em;
 }
 .form-label-checkbox {
   color: #8e8f99;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  margin-bottom: 24px;
-  margin-top: 16px;
+  align-items: baseline;
   font-size: 12px;
   font-weight: 400;
-  line-height: 14px;
+  line-height: 1.17;
   letter-spacing: 0.04em;
 }
 .form-label-checkbox .pr-pl {
@@ -568,7 +567,7 @@ body .footer-desc {
 .form-input:focus,
 .form-texarea:focus,
 .subscribe-input:focus {
-  border-color: #4D5AE5;
+  border-color: #4d5ae5;
 }
 .form-input::placeholder,
 .form-texarea::placeholder {
@@ -578,16 +577,18 @@ body .footer-desc {
   letter-spacing: 0.04em;
 }
 .form-texarea {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.02em;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
   width: 100%;
   height: 120px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   padding: 8px 16px;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   outline: transparent;
   resize: none;
 }
@@ -612,17 +613,29 @@ body .footer-desc {
 .form-field-wrap {
   position: relative;
 }
+.element-checkbox {
+  position: relative;
+  margin-bottom: 24px;
+}
 .element-input {
   margin-bottom: 8px;
+}
+.element-textarea {
+  margin-bottom: 16px;
 }
 .form-checkbox-border {
   width: 16px;
   height: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
   margin-right: 8px;
-  padding: 0.5px 3px;
   fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-checkbox:checked + .form-label-checkbox .form-checkbox-border,
 .button-close:hover,
