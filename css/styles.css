@@ -232,7 +232,9 @@ button {
 .orders-button:hover,
 .orders-button:focus,
 .subscribe-button:hover,
-.subscribe-button:focus {
+.subscribe-button:focus,
+.form-button:hover,
+.form-button:focus {
   background-color: #404bbf;
   cursor: pointer;
 }
@@ -449,7 +451,7 @@ body .footer-desc {
   padding: 24px;
   border-radius: 4px;
   max-width: 408px;
-  max-height: 80%;
+  max-height: 95%;
   overflow-y: auto;
 }
 .subscribe {
@@ -477,12 +479,10 @@ text-align: left;
   border-radius: 4px;
   background-color: #2e2f42;
   box-shadow: 0px 4px 4px 0px #00000026;
-  font-family: Roboto;
   font-size: 12px;
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.04em;
-  text-align: left;
   color: #ffffff;
 }
 .subscribe-button {
@@ -502,18 +502,122 @@ text-align: left;
   min-width: 24px;
   height: 24px;
   border-radius: 50%;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  fill: #2e2f42;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-close-icon {
+  padding: 7px;
 }
 .form-header {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  margin: 48px auto 16px;
 }
 .form-label {
   display: flex;
   flex-direction: column;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.04em;
+}
+.form-label-checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 24px;
+  margin-top: 16px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.04em;
+}
+.form-label-checkbox .pr-pl {
+  color: #4d5ae5;
+  text-decoration: underline;
 }
 .form-input {
-  margin-bottom: 4px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  width: 100%;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  padding: 8px 16px 8px 38px;
+  height: 40px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: transparent;
+}
+.form-input:focus,
+.form-texarea:focus {
+  border: 1px solid #4d5ae5;
+}
+.form-input::placeholder,
+.form-texarea::placeholder {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.04em;
 }
 .form-texarea {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  padding: 8px 16px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: transparent;
+  resize: none;
 }
 .form-checkbox {
+}
+.form-button {
+  margin: 0 auto;
+  padding: 16px 32px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+.input-icon {
+  fill: #2e2f42;
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.form-input:focus + .input-icon {
+  fill: #4d5ae5;
+}
+.form-field-wrap {
+  margin-bottom: 8px;
+  position: relative;
+}
+.form-checkbox-border {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  margin-right: 8px;
+  padding: 0.5px 2px;
+  fill: transparent;
+}
+.form-checkbox:checked + .form-label-checkbox .form-checkbox-border,
+.button-close:hover,
+.button-close:focus {
+  border: 1px solid #404bbf;
+  background-color: #404bbf;
+  fill: #f4f4fd;
 }
