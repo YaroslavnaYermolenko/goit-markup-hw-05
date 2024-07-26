@@ -538,9 +538,7 @@ body .footer-desc {
 }
 .form-label-checkbox {
   color: #8e8f99;
-  /*display: flex;
-  flex-direction: row;
-  align-items: flex-end;*/
+  display: inline-flex;
   font-size: 12px;
   font-weight: 400;
   line-height: 1.17;
