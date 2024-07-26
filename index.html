@@ -539,7 +539,12 @@
         <div class="subscribe">
           <p class="footer-soc-block-header">Subscribe</p>
           <div class="subscribe-feedback">
-            <input class="subscribe-input" type="text" placeholder="E-mail" />
+            <input
+              class="subscribe-input"
+              name="input-subscribe"
+              type="text"
+              placeholder="example@mail.com"
+            />
             <button class="subscribe-button" type="submit">
               Subscribe
               <svg class="button-icon" width="24" height="24">
@@ -599,20 +604,18 @@
             <use href="./images/icons.svg#icon-phone"></use>
           </svg>
         </div>
-        <label for="feedback-comment" class="form-label"
-          >Comment
-          
-        </label>
+        <label for="feedback-comment" class="form-label">Comment </label>
         <textarea
-            type="text"
-            name="feedback-comment"
-            class="form-texarea"
-            placeholder="Text input"
-          ></textarea>
+          type="text"
+          name="feedback-comment"
+          class="form-texarea"
+          placeholder="Text input"
+        ></textarea>
         <div class="form-field-wrap">
           <input
             type="checkbox"
             class="form-checkbox visually-hidden"
+            name="form-check"
             id="form-check"
           />
 
