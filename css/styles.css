@@ -623,7 +623,7 @@ body .footer-desc {
 .element-textarea {
   margin-bottom: 16px;
 }
-.form-checkbox-border {
+span.form-checkbox-border {
   width: 16px;
   height: 16px;
   display: inline-flex;
