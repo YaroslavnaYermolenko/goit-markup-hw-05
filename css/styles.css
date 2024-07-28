@@ -593,6 +593,9 @@ body .footer-desc {
 .subscribe-input:focus {
   border-color: #4d5ae5;
 }
+.subscribe-input::placeholder {
+  color: #fff;
+}
 .form-input::placeholder,
 .form-texarea::placeholder {
   font-size: 12px;
